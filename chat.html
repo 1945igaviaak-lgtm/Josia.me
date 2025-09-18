@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Juvo — Чаты</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🔥 Juvo 🔥</h1>
+  <nav>
+    <a href="index.html">Новости</a>
+    <a href="chat.html">Чаты</a>
+    <a href="teachers.html">Учителя</a>
+    <a href="classes.html">Классы</a>
+    <a href="info.html">Инфо</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Чат с другом (демо)</h2>
+  <div class="chatbox">
+    <p><b>Ты:</b> Привет!</p>
+    <p><b>Друг:</b> Здарова 😎</p>
+    <input type="text" placeholder="Напиши сообщение..." id="message" style="width:100%; padding:5px;">
+    <button onclick="sendMessage()">Отправить</button>
+  </div>
+</main>
+
+<script>
+function sendMessage() {
+  let input = document.getElementById("message");
+  if(input.value.trim() !== "") {
+    let chatbox = document.querySelector(".chatbox");
+    let newMsg = document.createElement("p");
+    newMsg.innerHTML = "<b>Ты:</b> " + input.value;
+    chatbox.appendChild(newMs
